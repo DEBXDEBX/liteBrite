@@ -79,6 +79,15 @@ h6:hover {
 }
 
 /* modal ******************************************** */
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
 .modal-container {
   background-color: rgba(0, 0, 0, 0.6);
   display: none;
@@ -111,16 +120,6 @@ h6:hover {
 .modal-header {
   color: #000;
   padding: 15px;
-}
-/* button {
-  padding: 4px;
-  margin: 4px;
-} */
-.loadPicture {
-  border-radius: 5px;
-  font-size: 1rem;
-  color: white;
-  background-color: blueviolet;
 }
 
 .modal-header h3 {
@@ -198,15 +197,7 @@ button:not(:disabled) {
   border-color: #d39e00;
 }
 /* ************************************************** */
-@keyframes modalopen {
-  from {
-    opacity: 0;
-  }
 
-  to {
-    opacity: 1;
-  }
-}
 @media screen and (max-width: 630px) {
   #panelWrapper {
     flex-direction: column;

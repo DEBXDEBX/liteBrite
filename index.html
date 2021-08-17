@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="This is my website description" />
+    <meta name="keywords" content="web development, web design" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon" />
+    <!-- My CSS File -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon" />
+    <title>Lite Brite</title>
+  </head>
+  <body>
+
+    <audio id="savPicAudio">
+      <source src="assets/sound/savePic.wav" type="audio/wav" />
+    </audio>
+
+    <audio id="loadPicAudio">
+      <source src="assets/sound/loadPic.wav" type="audio/wav" />
+    </audio>
+    <audio id="cancelAudio">
+      <source src="assets/sound/cancel.wav" type="audio/wav" />
+    </audio>
+    <audio id="deleteAudio">
+      <source src="assets/sound/delete.wav" type="audio/wav" />
+    </audio>
+    <audio id="tabAudio">
+      <source src="assets/sound/tab.wav" type="audio/wav" />
+    </audio>
+    <audio id="warning1Audio">
+      <source src="assets/sound/warning1.wav" type="audio/wav" />
+    </audio>
+
+     <div id="mainContainer">
+
+        <div id="panelWrapper">
+
+        <section id="colorPanel">
+        <!-- <div class="colorPick"></div> -->
+        </section>
+
+        <div id="controlPanel">
+           <h6 id="save" class="control">Save</h6>
+           <h6 id="load" class="control">Load</h6>
+           <h6 id="reset" class="control">Reset</h6>
+        </div>
+     </div>
+     </div>
+    <section id="gameBoard"></section>
+     </div>
+
+       <!--Load or Delete Modal -->
+    <div class="modal-container" id="loadModal">
+      <div class="modal">
+
+        <div class="modal-header">
+          <h3>Load or delete Picture</h3>
+        </div>
+        <div class="modal-content">
+        <ul id="loadOrDeleteList">
+        </ul>
+        <div class="form-group">
+          <button id="loadOrDeleteCancelBTN" class="btn btn-warning form-control">Cancel</button>
+        </div>
+        </div>
+      </div>
+    </div> 
+
+       <!-- Save Modal -->
+       <div class="modal-container" id="saveModal">
+        <div class="modal">
+  
+          <div class="modal-header">  
+            <h3>Save Picture</h3>
+          </div>
+          <div class="modal-content">
+            <form autocomplete="off">
+              <div class="form-group">
+            <input autofocus class="form-control" id="pictureText" type="text" placeholder="Enter a name for the picture">
+            </div>
+            <div class="form-group">
+            <button class="btn btn-primary form-control"  type="submit" id="saveModalBTN">Save</button>
+           </div>
+            <div class="form-group">
+            <button class="btn btn-warning form-control"  id="saveModalCancelBTN">Cancel</button>
+          </div>
+          </form>
+          </div>
+        </div>
+      </div>
+    <!-- My JavaScript File -->
+    <script type="text/javascript" src="assets/js/picture.js"></script>
+    <script type="text/javascript" src="assets/js/arrayStorage.js"></script>
+    <script type="text/javascript" src="assets/js/elements.js"></script>
+    <script type="text/javascript" src="assets/js/script.js"></script>
+  </body>
+</html>

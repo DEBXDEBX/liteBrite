@@ -9,7 +9,8 @@
 /* Main Styling */
 html,
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
+  font-family: "Permanent Marker", cursive;
   line-height: 1.7em;
 }
 a {

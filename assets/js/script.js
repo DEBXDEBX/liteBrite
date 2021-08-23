@@ -158,17 +158,18 @@ el.loadOrDeleteCancelBTN.addEventListener("click", () => {
 // Save Modal code **************************************
 el.saveModalBTN.addEventListener("click", (e) => {
   e.preventDefault();
-  const pegHoles = document.querySelectorAll(".pegHole");
-  const newArray = [];
-  for (let pegHole of pegHoles) {
-    newArray.push(pegHole.style.backgroundColor);
-  }
   const newPictureName = el.pictureText.value.trim();
   if (!newPictureName) {
     warning1Audio.play();
     return;
   }
   savPicAudio.play();
+  const pegHoles = document.querySelectorAll(".pegHole");
+  const newArray = [];
+  for (let pegHole of pegHoles) {
+    newArray.push(pegHole.style.backgroundColor);
+  }
+
   const newPicture = new Picture(newPictureName, newArray);
   const liteBriteStorage = new ArrayStorageLS(LIGHT_BRITE_STORAGE_KEY);
   const LS_Array = liteBriteStorage.getArrayFromLS();

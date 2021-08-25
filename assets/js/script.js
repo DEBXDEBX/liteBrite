@@ -36,6 +36,7 @@ function startUp() {
   insertPegs();
   insertColors();
   selectAllColoredPegs();
+  screen.orientation.lock("portrait");
 }
 
 const insertPegs = () => {
@@ -61,6 +62,7 @@ const selectAllColoredPegs = () => {
   for (let color of colors) {
     color.addEventListener("click", function () {
       pegColor = this.style.backgroundColor;
+      el.colorPanel.style.backgroundColor = pegColor;
     });
   }
 };

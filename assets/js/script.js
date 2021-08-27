@@ -36,7 +36,9 @@ function startUp() {
   insertPegs();
   insertColors();
   selectAllColoredPegs();
-  screen.orientation.lock("portrait");
+  screen.orientation.lock("portrait").catch((e) => {
+    console.log(e);
+  });
 }
 
 const insertPegs = () => {
